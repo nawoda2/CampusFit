@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		507884F729EE2DFD00982CCC /* CampusFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507884F629EE2DFD00982CCC /* CampusFitApp.swift */; };
-		507884F929EE2DFD00982CCC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507884F829EE2DFD00982CCC /* ContentView.swift */; };
 		507884FB29EE2DFF00982CCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 507884FA29EE2DFF00982CCC /* Assets.xcassets */; };
 		507884FE29EE2DFF00982CCC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 507884FD29EE2DFF00982CCC /* Preview Assets.xcassets */; };
+		E33C06C629EF505A00B34C6E /* SocialMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33C06C529EF505A00B34C6E /* SocialMedia.swift */; };
+		E33C06C829EF50C700B34C6E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33C06C729EF50C700B34C6E /* Message.swift */; };
+		E33C06CA29EF50E500B34C6E /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33C06C929EF50E400B34C6E /* Events.swift */; };
+		E33C06CC29EFB53700B34C6E /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33C06CB29EFB53700B34C6E /* Comments.swift */; };
+		E33C06CE29F08A9500B34C6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33C06CD29F08A9500B34C6E /* ContentView.swift */; };
+		E33C06D229F09CD900B34C6E /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33C06D129F09CD900B34C6E /* Share.swift */; };
+		E33C06D429F0B05E00B34C6E /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33C06D329F0B05E00B34C6E /* Search.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		507884F329EE2DFD00982CCC /* CampusFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		507884F629EE2DFD00982CCC /* CampusFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusFitApp.swift; sourceTree = "<group>"; };
-		507884F829EE2DFD00982CCC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		507884FA29EE2DFF00982CCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		507884FD29EE2DFF00982CCC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E33C06C529EF505A00B34C6E /* SocialMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMedia.swift; sourceTree = "<group>"; };
+		E33C06C729EF50C700B34C6E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		E33C06C929EF50E400B34C6E /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		E33C06CB29EFB53700B34C6E /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
+		E33C06CD29F08A9500B34C6E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E33C06D129F09CD900B34C6E /* Share.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
+		E33C06D329F0B05E00B34C6E /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +64,13 @@
 			isa = PBXGroup;
 			children = (
 				507884F629EE2DFD00982CCC /* CampusFitApp.swift */,
-				507884F829EE2DFD00982CCC /* ContentView.swift */,
+				E33C06CD29F08A9500B34C6E /* ContentView.swift */,
+				E33C06C529EF505A00B34C6E /* SocialMedia.swift */,
+				E33C06D329F0B05E00B34C6E /* Search.swift */,
+				E33C06C929EF50E400B34C6E /* Events.swift */,
+				E33C06C729EF50C700B34C6E /* Message.swift */,
+				E33C06CB29EFB53700B34C6E /* Comments.swift */,
+				E33C06D129F09CD900B34C6E /* Share.swift */,
 				507884FA29EE2DFF00982CCC /* Assets.xcassets */,
 				507884FC29EE2DFF00982CCC /* Preview Content */,
 			);
@@ -137,8 +155,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				507884F929EE2DFD00982CCC /* ContentView.swift in Sources */,
+				E33C06C629EF505A00B34C6E /* SocialMedia.swift in Sources */,
+				E33C06CC29EFB53700B34C6E /* Comments.swift in Sources */,
+				E33C06D229F09CD900B34C6E /* Share.swift in Sources */,
+				E33C06CE29F08A9500B34C6E /* ContentView.swift in Sources */,
+				E33C06C829EF50C700B34C6E /* Message.swift in Sources */,
+				E33C06D429F0B05E00B34C6E /* Search.swift in Sources */,
 				507884F729EE2DFD00982CCC /* CampusFitApp.swift in Sources */,
+				E33C06CA29EF50E500B34C6E /* Events.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
