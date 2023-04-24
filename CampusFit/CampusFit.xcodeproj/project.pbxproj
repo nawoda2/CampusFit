@@ -10,9 +10,9 @@
 		507884F729EE2DFD00982CCC /* CampusFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507884F629EE2DFD00982CCC /* CampusFitApp.swift */; };
 		507884FB29EE2DFF00982CCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 507884FA29EE2DFF00982CCC /* Assets.xcassets */; };
 		507884FE29EE2DFF00982CCC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 507884FD29EE2DFF00982CCC /* Preview Assets.xcassets */; };
+		50C7267F29EF3DFA00249451 /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C7267E29EF3DFA00249451 /* ChallengeView.swift */; };
 		50C7268129F0976200249451 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C7268029F0976200249451 /* Profile.swift */; };
 		50C7268529F310FD00249451 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C7268429F310FD00249451 /* SettingView.swift */; };
-		50C7267F29EF3DFA00249451 /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C7267E29EF3DFA00249451 /* ChallengeView.swift */; };
 		E33C06C629EF505A00B34C6E /* SocialMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33C06C529EF505A00B34C6E /* SocialMedia.swift */; };
 		E33C06C829EF50C700B34C6E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33C06C729EF50C700B34C6E /* Message.swift */; };
 		E33C06CA29EF50E500B34C6E /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33C06C929EF50E400B34C6E /* Events.swift */; };
@@ -70,12 +70,11 @@
 			isa = PBXGroup;
 			children = (
 				507884F629EE2DFD00982CCC /* CampusFitApp.swift */,
-				507884F829EE2DFD00982CCC /* ContentView.swift */,
+				E33C06CD29F08A9500B34C6E /* ContentView.swift */,
+				E33C06C529EF505A00B34C6E /* SocialMedia.swift */,
 				50C7268029F0976200249451 /* Profile.swift */,
 				50C7268429F310FD00249451 /* SettingView.swift */,
 				50C7267E29EF3DFA00249451 /* ChallengeView.swift */,
-				E33C06CD29F08A9500B34C6E /* ContentView.swift */,
-				E33C06C529EF505A00B34C6E /* SocialMedia.swift */,
 				E33C06D329F0B05E00B34C6E /* Search.swift */,
 				E33C06C929EF50E400B34C6E /* Events.swift */,
 				E33C06C729EF50C700B34C6E /* Message.swift */,
@@ -165,7 +164,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				507884F929EE2DFD00982CCC /* ContentView.swift in Sources */,
 				50C7268529F310FD00249451 /* SettingView.swift in Sources */,
 				50C7268129F0976200249451 /* Profile.swift in Sources */,
 				E33C06C629EF505A00B34C6E /* SocialMedia.swift in Sources */,

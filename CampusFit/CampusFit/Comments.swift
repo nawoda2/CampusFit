@@ -57,3 +57,9 @@ struct Comments: View {
         }
     }
 }
+
+struct Comments_Previews: PreviewProvider {
+    static var previews: some View {
+        Comments()
+    }
+}

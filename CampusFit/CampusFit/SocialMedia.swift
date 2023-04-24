@@ -142,3 +142,9 @@ struct History: View {
         }
     }
 }
+
+struct SocialMedia_Previews: PreviewProvider {
+    static var previews: some View {
+        SocialMedia()
+    }
+}

@@ -67,3 +67,11 @@ struct Chat: View {
         }
     }
 }
+
+struct Message_Previews: PreviewProvider {
+    static var previews: some View {
+        Message()
+    }
+}
+
+

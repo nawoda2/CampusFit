@@ -135,3 +135,9 @@ struct Event_Recipe: View {
     }
 }
 
+struct Search_Previews: PreviewProvider {
+    static var previews: some View {
+        Search()
+    }
+}
+
