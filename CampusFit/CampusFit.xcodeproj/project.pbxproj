@@ -13,6 +13,7 @@
 		507884FE29EE2DFF00982CCC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 507884FD29EE2DFF00982CCC /* Preview Assets.xcassets */; };
 		50C7268129F0976200249451 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C7268029F0976200249451 /* Profile.swift */; };
 		50C7268529F310FD00249451 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C7268429F310FD00249451 /* SettingView.swift */; };
+		50C7267F29EF3DFA00249451 /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C7267E29EF3DFA00249451 /* ChallengeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		507884F829EE2DFD00982CCC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		507884FA29EE2DFF00982CCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		507884FD29EE2DFF00982CCC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		50C7267E29EF3DFA00249451 /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
 		50C7268029F0976200249451 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		50C7268429F310FD00249451 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +61,7 @@
 				507884F829EE2DFD00982CCC /* ContentView.swift */,
 				50C7268029F0976200249451 /* Profile.swift */,
 				50C7268429F310FD00249451 /* SettingView.swift */,
+				50C7267E29EF3DFA00249451 /* ChallengeView.swift */,
 				507884FA29EE2DFF00982CCC /* Assets.xcassets */,
 				507884FC29EE2DFF00982CCC /* Preview Content */,
 			);
@@ -147,6 +150,7 @@
 				50C7268529F310FD00249451 /* SettingView.swift in Sources */,
 				50C7268129F0976200249451 /* Profile.swift in Sources */,
 				507884F729EE2DFD00982CCC /* CampusFitApp.swift in Sources */,
+				50C7267F29EF3DFA00249451 /* ChallengeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
