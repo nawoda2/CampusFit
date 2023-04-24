@@ -88,10 +88,8 @@ struct ProfileView: View {
                     
                     }.toolbar {
                         ToolbarItemGroup(placement: .navigationBarTrailing) {
-                            Button {
-                                SettingView()
-                            } label: {
-                                Label("Settings", systemImage: "gearshape")
+                            NavigationLink(destination: SettingView()) {
+                                Label("Setting", systemImage: "gearshape")
                             }
                         }
                     }
@@ -106,12 +104,6 @@ struct PostView: View {
         VStack {
             Image(newPost.image).resizable().scaledToFit()
         }
-    }
-}
-
-struct SettingView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
