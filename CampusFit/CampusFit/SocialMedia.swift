@@ -108,23 +108,17 @@ struct SocialMedia: View {
                                 .frame(width: 48.0, height: 48.0)
                         }
                         Spacer()
-                        Button(action: {
-                            print("button pressed")
-                            
-                        }) {
-                            Image("Challenges")
-                                .resizable()
-                                .frame(width: 48.0, height: 48.0)
-                        }
+                        NavigationLink(destination: ChallengeView()) {
+                                       Image("Challenges")
+                                        .resizable()
+                                        .frame(width: 48.0, height: 48.0)
+                                    }
                         Spacer()
-                        Button(action: {
-                            print("button pressed")
-                            
-                        }) {
-                            Image("Profile")
-                                .resizable()
-                                .frame(width: 48.0, height: 48.0)
-                        }
+                        NavigationLink(destination: ProfileView()) {
+                                       Image("Profile")
+                                        .resizable()
+                                        .frame(width: 48.0, height: 48.0)
+                                    }
                     }.padding([.horizontal, .top], 15)
                         .frame(width: proxy.size.width, height: proxy.size.height)
                         .background(grey)
