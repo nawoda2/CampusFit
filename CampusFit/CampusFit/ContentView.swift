@@ -2,9 +2,10 @@
 //  ContentView.swift
 //  CampusFit
 //
-//  Created by Nawoda Wijesooriya on 4/17/23.
+//  Created by Eric Park on 4/19/23.
 //
 
+import Foundation
 import SwiftUI
 
 struct ContentView: View {
