@@ -16,67 +16,79 @@ struct ContentView: View {
     
     @State private var username: String = ""
     @State private var password: String = ""
+    @State var isLoggedIn: Bool = false
     
     var isSignInButtonDisabled: Bool {
         [username, password].contains(where: \.isEmpty)
     }
     
     var body: some View {
-        ZStack {
-            LinearGradient(gradient: Gradient(colors: [blue, yellow]), startPoint: .top, endPoint: .bottom).ignoresSafeArea()
-            VStack {
-                
-                Image("Image")
-                    .foregroundColor(.accentColor).padding(.top, 50).fixedSize()
-                Spacer()
-                TextField(
-                        "Username",
-                        text: $username,
-                        prompt: Text("Username").foregroundColor(.black)
+        if isLoggedIn {
+            SocialMedia()
+        } else {
+            ZStack {
+                LinearGradient(gradient: Gradient(colors: [blue, yellow]), startPoint: .top, endPoint: .bottom).ignoresSafeArea()
+                VStack {
+                    
+                    Image("Image")
+                        .foregroundColor(.accentColor).padding(.top, 50).fixedSize()
+                    Spacer()
+                    TextField(
+                            "Username",
+                            text: $username,
+                            prompt: Text("Username").foregroundColor(.black)
+                        )
+                        .padding(10)
+                        .textInputAutocapitalization(.never)
+                        .disableAutocorrection(true)
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(.blue, lineWidth: 2)
+                        }
+                        .padding(.all)
+                    SecureField(
+                                "Password",
+                                text: $password,
+                                prompt: Text("Password").foregroundColor(.black))
+                        .padding(10)
+                        .textInputAutocapitalization(.never)
+                        .disableAutocorrection(true)
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(.blue, lineWidth: 2)
+                        }
+                        .padding(.all)
+                    Spacer()
+                    Button {
+                        print("do login action")
+                        login()
+                    } label: {
+                        Text("Sign In")
+                            .font(.title2)
+                            .bold()
+                            .foregroundColor(.white)
+                    }
+                    .frame(height: 50)
+                    .frame(maxWidth: .infinity)
+                    .background(
+                        isSignInButtonDisabled ?
+                        LinearGradient(colors: [.gray], startPoint: .topLeading, endPoint: .bottomTrailing) :
+                            LinearGradient(colors: [.blue, .yellow], startPoint: .topLeading, endPoint: .bottomTrailing)
                     )
-                    .padding(10)
-                    .textInputAutocapitalization(.never)
-                    .disableAutocorrection(true)
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(.blue, lineWidth: 2)
-                    }
-                    .padding(.all)
-                SecureField(
-                            "Password",
-                            text: $password,
-                            prompt: Text("Password").foregroundColor(.black))
-                    .padding(10)
-                    .textInputAutocapitalization(.never)
-                    .disableAutocorrection(true)
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(.blue, lineWidth: 2)
-                    }
-                    .padding(.all)
-                Spacer()
-                Button {
-                    print("do login action")
-                } label: {
-                    Text("Sign In")
-                        .font(.title2)
-                        .bold()
-                        .foregroundColor(.white)
+                    .cornerRadius(20)
+                    .disabled(isSignInButtonDisabled)
+                    .padding()
+                    
+                    
                 }
-                .frame(height: 50)
-                .frame(maxWidth: .infinity)
-                .background(
-                    isSignInButtonDisabled ?
-                    LinearGradient(colors: [.gray], startPoint: .topLeading, endPoint: .bottomTrailing) :
-                        LinearGradient(colors: [.blue, .yellow], startPoint: .topLeading, endPoint: .bottomTrailing)
-                )
-                .cornerRadius(20)
-                .disabled(isSignInButtonDisabled) // how to disable while some condition is applied
                 .padding()
-                
-                
             }
-            .padding()
+        }
+    }
+    
+    func login() {
+        if username == "testName" && password == "1234" {
+            isLoggedIn = true
         }
     }
 }
