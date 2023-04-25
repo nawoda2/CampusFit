@@ -48,7 +48,16 @@ struct ChallengeView: View {
 
 struct TodayView: View {
     var body: some View {
-        Color.red
+        ZStack {
+            Color.black.ignoresSafeArea()
+            VStack {
+                Text("Step Counter: 12345").fontWeight(.light).frame(maxWidth: 318, maxHeight: 69).background(Color.white).foregroundColor(Color.black).clipShape(RoundedRectangle(cornerRadius: 40))
+                
+                
+                
+                Spacer()
+            }
+        }
     }
 }
 
