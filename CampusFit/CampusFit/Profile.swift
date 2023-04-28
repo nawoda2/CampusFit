@@ -26,6 +26,8 @@ struct ProfileView: View {
     
     var body: some View {
         
+        
+        
         let newPosts = [
             Post(
                 id: UUID(), caption: "Biking", image: "IMG_6427"),

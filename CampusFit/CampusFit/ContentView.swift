@@ -7,6 +7,8 @@
 
 import Foundation
 import SwiftUI
+import Firebase
+import FirebaseCore
 
 struct ContentView: View {
     
@@ -18,13 +20,30 @@ struct ContentView: View {
     @State private var password: String = ""
     @State var isLoggedIn: Bool = false
     
+    init() {
+        FirebaseApp.configure()
+    }
+    
+    func login() {
+        Auth.auth().signIn(withEmail: username, password: password) { (result, error) in
+            if error != nil {
+                print(error?.localizedDescription ?? "")
+            } else {
+                isLoggedIn = true
+                print("success")
+            }
+        }
+    }
+    
+    
+    
     var isSignInButtonDisabled: Bool {
         [username, password].contains(where: \.isEmpty)
     }
     
     var body: some View {
         if isLoggedIn {
-            SocialMedia()
+            NavBarView()
         } else {
             ZStack {
                 LinearGradient(gradient: Gradient(colors: [blue, yellow]), startPoint: .top, endPoint: .bottom).ignoresSafeArea()
@@ -83,12 +102,6 @@ struct ContentView: View {
                 }
                 .padding()
             }
-        }
-    }
-    
-    func login() {
-        if username == "testName" && password == "1234" {
-            isLoggedIn = true
         }
     }
 }

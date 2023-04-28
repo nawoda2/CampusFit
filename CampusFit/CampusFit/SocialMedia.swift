@@ -87,47 +87,12 @@ struct SocialMedia: View {
                     }
                 }
                 .frame(height: 590)
-                GeometryReader { proxy in
-                    HStack {
-                        Image("Home")
-                         .resizable()
-                         .frame(width: 48.0, height: 48.0)
-                        Spacer()
-                        NavigationLink(destination: Search()) {
-                                       Image("Search")
-                                        .resizable()
-                                        .frame(width: 48.0, height: 48.0)
-                                    }
-                        Spacer()
-                        Button(action: {
-                            print("button pressed")
-                            
-                        }) {
-                            Image("Post")
-                                .resizable()
-                                .frame(width: 48.0, height: 48.0)
-                        }
-                        Spacer()
-                        NavigationLink(destination: ChallengeView()) {
-                                       Image("Challenges")
-                                        .resizable()
-                                        .frame(width: 48.0, height: 48.0)
-                                    }
-                        Spacer()
-                        NavigationLink(destination: ProfileView()) {
-                                       Image("Profile")
-                                        .resizable()
-                                        .frame(width: 48.0, height: 48.0)
-                                    }
-                    }.padding([.horizontal, .top], 15)
-                        .frame(width: proxy.size.width, height: proxy.size.height)
-                        .background(grey)
-                }
+            }
             }
         }
     }
     
-}
+
 
 struct History: View {
     var body: some View {

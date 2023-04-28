@@ -75,51 +75,6 @@ struct Search : View {
                     .padding(5)
                     .background(.yellow)
                     .cornerRadius(15)
-
-
-                HStack {
-                    NavigationLink(destination: SocialMedia()) {
-                        Image("Home")
-                         .resizable()
-                         .frame(width: 48.0, height: 48.0)
-                     }
-                    Spacer()
-                    NavigationLink(destination: Search()) {
-                                   Image("Search")
-                                    .resizable()
-                                    .frame(width: 48.0, height: 48.0)
-                                }
-                    Spacer()
-                    Button(action: {
-                        print("button pressed")
-                        
-                    }) {
-                        Image("Post")
-                            .resizable()
-                            .frame(width: 48.0, height: 48.0)
-                    }
-                    Spacer()
-                    Button(action: {
-                        print("button pressed")
-                        
-                    }) {
-                        Image("Challenges")
-                            .resizable()
-                            .frame(width: 48.0, height: 48.0)
-                    }
-                    Spacer()
-                    Button(action: {
-                        print("button pressed")
-                        
-                    }) {
-                        Image("Profile")
-                            .resizable()
-                            .frame(width: 48.0, height: 48.0)
-                    }
-                    
-                }.padding([.horizontal, .top], 15)
-                    .frame(width: proxy.size.width, height: 100)
-                    .background(.gray)
                     
 
             }

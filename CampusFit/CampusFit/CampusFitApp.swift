@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 @main
 struct CampusFitApp: App {
     var body: some Scene {
