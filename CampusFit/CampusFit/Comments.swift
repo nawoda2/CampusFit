@@ -13,14 +13,6 @@ struct Comments: View {
         GeometryReader { proxy in
             VStack {
                 HStack {
-                    Button(action: {
-                        print("button pressed")
-                        
-                    }) {
-                        Image("Back")
-                            .resizable()
-                            .frame(width: 36.0, height: 36.0)
-                    }
                     Spacer()
                     Text("Comments").font(.system(size: 24.0))
                         .padding(.trailing, 36.0)
