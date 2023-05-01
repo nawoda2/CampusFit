@@ -63,67 +63,14 @@ struct TodayView: View {
 
 struct MonthlyView: View {
     var body: some View {
-        TabView {
-            SocialMedia().tabItem {
-                Image("Home").resizable().frame(width: 48.0, height: 48.0)
-                Text("Home")
-            }
-            Search().tabItem {
-                Image("Search")
-                Text("Search")
-            }
-            ChallengeView().tabItem{
-                Image("Challenge")
-                Text("Challenge")
-            }
-            ProfileView().tabItem {
-                Image("Profile")
-                Text("Profile")
-            }
+        ZStack{
+            Color.red.ignoresSafeArea()
         }
-            
-            /*
-             HStack {
-             Image("Home")
-             .resizable()
-             .frame(width: 48.0, height: 48.0)
-             Spacer()
-             NavigationLink(destination: Search()) {
-             Image("Search")
-             .resizable()
-             .frame(width: 48.0, height: 48.0)
-             }
-             Spacer()
-             Button(action: {
-             print("button pressed")
-             
-             }) {
-             Image("Post")
-             .resizable()
-             .frame(width: 48.0, height: 48.0)
-             }
-             Spacer()
-             NavigationLink(destination: ChallengeView()) {
-             Image("Challenges")
-             .resizable()
-             .frame(width: 48.0, height: 48.0)
-             }
-             Spacer()
-             NavigationLink(destination: ProfileView()) {
-             Image("Profile")
-             .resizable()
-             .frame(width: 48.0, height: 48.0)
-             }
-             }.padding([.horizontal, .top], 15)
-             .frame(width: proxy.size.width, height: proxy.size.height)
-             .background(grey)
-             
-             */
     }
 }
 
 struct ChallengeView_Previews: PreviewProvider {
     static var previews: some View {
-        MonthlyView()
+        ChallengeView()
     }
 }

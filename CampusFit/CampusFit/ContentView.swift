@@ -45,14 +45,15 @@ struct ContentView: View {
         if isLoggedIn {
             NavBarView()
         } else {
-            ZStack {
-                LinearGradient(gradient: Gradient(colors: [blue, yellow]), startPoint: .top, endPoint: .bottom).ignoresSafeArea()
-                VStack {
-                    
-                    Image("Image")
-                        .foregroundColor(.accentColor).padding(.top, 50).fixedSize()
-                    Spacer()
-                    TextField(
+            NavigationView {
+                ZStack {
+                    LinearGradient(gradient: Gradient(colors: [blue, yellow]), startPoint: .top, endPoint: .bottom).ignoresSafeArea()
+                    VStack {
+                        
+                        Image("Image")
+                            .foregroundColor(.accentColor).padding(.top, 50).fixedSize()
+                        Spacer()
+                        TextField(
                             "Username",
                             text: $username,
                             prompt: Text("Username").foregroundColor(.black)
@@ -65,10 +66,10 @@ struct ContentView: View {
                                 .stroke(.blue, lineWidth: 2)
                         }
                         .padding(.all)
-                    SecureField(
-                                "Password",
-                                text: $password,
-                                prompt: Text("Password").foregroundColor(.black))
+                        SecureField(
+                            "Password",
+                            text: $password,
+                            prompt: Text("Password").foregroundColor(.black))
                         .padding(10)
                         .textInputAutocapitalization(.never)
                         .disableAutocorrection(true)
@@ -77,12 +78,92 @@ struct ContentView: View {
                                 .stroke(.blue, lineWidth: 2)
                         }
                         .padding(.all)
+                        Spacer()
+                        Button {
+                            print("do login action")
+                            login()
+                        } label: {
+                            Text("Sign In")
+                                .font(.title2)
+                                .bold()
+                                .foregroundColor(.white)
+                        }
+                        .frame(height: 50)
+                        .frame(maxWidth: .infinity)
+                        .background(
+                            isSignInButtonDisabled ?
+                            LinearGradient(colors: [.gray], startPoint: .topLeading, endPoint: .bottomTrailing) :
+                                LinearGradient(colors: [.blue, .yellow], startPoint: .topLeading, endPoint: .bottomTrailing)
+                        )
+                        .cornerRadius(20)
+                        .disabled(isSignInButtonDisabled)
+                        .padding()
+                        
+                        NavigationLink("Create Account", destination: CreateView())
+                        
+                        
+                    }
+                    .padding()
+                }
+            }
+        }
+    }
+}
+
+
+
+struct CreateView: View {
+    
+    let blue = Color(red: 68/255, green: 143/255, blue: 232/255)
+    let yellow = Color(red: 255/255, green: 252/255, blue: 189/255)
+    
+    @State var username: String = ""
+    @State var password: String = ""
+    @State var isLoggedIn: Bool = false
+    
+    
+    var isSignInButtonDisabled: Bool {
+        [username, password].contains(where: \.isEmpty)
+    }
+    
+    var body: some View {
+        if (isLoggedIn) {
+            NavBarView()
+        } else {
+            ZStack {
+                LinearGradient(gradient: Gradient(colors: [blue, yellow]), startPoint: .top, endPoint: .bottom).ignoresSafeArea()
+                VStack {
+                    Spacer()
+                    TextField(
+                        "Username",
+                        text: $username,
+                        prompt: Text("Username").foregroundColor(.black)
+                    )
+                    .padding(10)
+                    .textInputAutocapitalization(.never)
+                    .disableAutocorrection(true)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(.blue, lineWidth: 2)
+                    }
+                    .padding(.all)
+                    TextField(
+                        "Password",
+                        text: $password,
+                        prompt: Text("Password").foregroundColor(.black))
+                    .padding(10)
+                    .textInputAutocapitalization(.never)
+                    .disableAutocorrection(true)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(.blue, lineWidth: 2)
+                    }.padding(.all)
                     Spacer()
                     Button {
                         print("do login action")
-                        login()
+                        createUser()
                     } label: {
-                        Text("Sign In")
+                        Text("Create Account")
                             .font(.title2)
                             .bold()
                             .foregroundColor(.white)
@@ -97,17 +178,23 @@ struct ContentView: View {
                     .cornerRadius(20)
                     .disabled(isSignInButtonDisabled)
                     .padding()
-                    
-                    
-                }
-                .padding()
+                }.navigationTitle("Create Account")
             }
         }
+        
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    
+    
+    func createUser() {
+        Auth.auth().createUser(withEmail: username, password: password) {
+            authResult, error in
+            
+            if let err = error {
+                print(err.localizedDescription)
+            } else {
+                isLoggedIn = true
+                print("success")
+            }
+        }
     }
 }
